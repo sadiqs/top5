@@ -3,7 +3,7 @@ const MAX_RESTAURANTS = 5;
 
 export const fetchTopRestaurants = location => {
   return fetch(
-    "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?" +
+    "/v3/businesses/search?" +
       `location=${location}&` +
       "categories=icecream&" +
       "sort_by=rating",
@@ -39,7 +39,7 @@ export const fetchTopRestaurants = location => {
 
 const fetchFirstReview = businessId => {
   return fetch(
-    `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${businessId}/reviews`,
+    `/v3/businesses/${businessId}/reviews`,
     {
       method: "GET",
       headers: {
